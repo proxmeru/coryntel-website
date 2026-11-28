@@ -1,8 +1,8 @@
 const t = {
   pt: {
     "nav.home": "Início", "nav.solutions": "Soluções", "nav.insights": "Insights",
-    "nav.contact": "Contacto", "nav.funcionalidades": "Funcionalidades", "nav.modulos": "Módulos",
-    "nav.como-funciona": "Como Funciona", "nav.cta": "Falar com Especialista", "nav.coryntel": "Conheça Coryntel Software",
+    "nav.contact": "Contacto", "nav.funcionalidades": "Recursos", "nav.modulos": "Módulos",
+    "nav.como-funciona": "Contacto", "nav.cta": "Falar com Especialista", "nav.coryntel": "Agendar Demonstração",
     "hero.tag": "Engenharia de Software & Cloud — Escala Global",
     "hero.h1a": "Infraestrutura que",
     "hero.h1b": "Escala com o seu Negócio",
@@ -55,6 +55,7 @@ const t = {
     "insights.title3": "Arquitetura Multi-Cloud: Como Garantir 99.9% de Uptime",
     "insights.desc3": "Como a engenharia multi-cloud entre AWS e Google Cloud elimina falhas críticas e otimiza os custos operacionais.",
     "insights.date": "2 Agosto, 2026",
+    "insights.sub": "Estratégias avançadas de engenharia, cloud e automação inteligente para empresas líderes que operam com sucesso à escala global competitiva.",
     "insights.readmore": "Ler mais →",
     "cta.rating": "Confiado por empresas e equipas inovadoras",
     "cta.btn1": "Solicitar Diagnóstico",
@@ -209,8 +210,8 @@ const t = {
   },
   en: {
     "nav.home": "Home", "nav.solutions": "Solutions", "nav.insights": "Insights",
-    "nav.contact": "Contact", "nav.funcionalidades": "Funcionalidades", "nav.modulos": "Modules",
-    "nav.como-funciona": "How it Works", "nav.cta": "Talk to a Specialist", "nav.coryntel": "Discover Coryntel Software",
+    "nav.contact": "Contact", "nav.funcionalidades": "Resources", "nav.modulos": "Modules",
+    "nav.como-funciona": "Contact", "nav.cta": "Talk to a Specialist", "nav.coryntel": "Schedule Demo",
     "hero.tag": "Software Engineering & Cloud — Global Scale",
     "hero.h1a": "Infrastructure that",
     "hero.h1b": "Scales with Your Business",
@@ -443,6 +444,34 @@ function applyLang(l) {
   document.body.classList.add("lang-switching");
   setTimeout(() => document.body.classList.remove("lang-switching"), 400);
 }
+
+function syncNavCtaWidth() {
+  const cta = document.querySelector(".nav-cta[data-i18n]");
+  if (!cta) return;
+  const key = cta.dataset.i18n;
+  const texts = [t.pt[key], t.en[key]].filter(Boolean);
+  if (texts.length < 2) return;
+
+  cta.style.minWidth = "";
+  const current = cta.innerHTML;
+  let maxWidth = 0;
+
+  for (const text of texts) {
+    cta.innerHTML = text;
+    maxWidth = Math.max(maxWidth, cta.getBoundingClientRect().width);
+  }
+
+  cta.innerHTML = current;
+  if (maxWidth > 0) {
+    cta.style.minWidth = `${Math.ceil(maxWidth)}px`;
+  }
+}
+
+syncNavCtaWidth();
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(syncNavCtaWidth);
+}
+window.addEventListener("resize", syncNavCtaWidth);
 
 document.getElementById("lang-toggle").addEventListener("click", () => {
   applyLang(lang === "pt" ? "en" : "pt");
