@@ -1,143 +1,530 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coryntel Software - Gestão e Faturação Online Certificada pela AT</title>
-    <!-- Tailwind CSS -->
-    <script src="https://jsdelivr.net"></script>
-    <!-- Lucide Icons (para ícones modernos) -->
-    <script src="https://unpkg.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <title>Proxmeru — Engineering the Future of Business</title>
+  <meta name="description" content="Engenharia de software de alta performance, cloud e automação para empresas que operam à escala global." />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
+<body>
+  <div id="top"></div>
 
-    <!-- 1. NAVBAR / CABEÇALHO -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <span class="text-2xl font-bold tracking-tight bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Coryntel</span>
-                <span class="text-xs font-mono uppercase bg-slate-800 text-slate-400 px-2 py-0.5 rounded border border-slate-700">by Proxmeru</span>
-            </div>
-            
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#modulos" class="hover:text-emerald-400 transition-colors">Módulos</a>
-                <a href="#beneficios" class="hover:text-emerald-400 transition-colors">Vantagens</a>
-                <a href="#precos" class="hover:text-emerald-400 transition-colors">Preços</a>
-                <a href="#certificacao" class="hover:text-emerald-400 transition-colors">Certificação AT</a>
-            </nav>
+  <!-- NAV -->
+  <header id="top">
+    <nav class="nav">
+      <a href="#top" class="nav-logo">
+        <img src="assets/img/logo.png" alt="Proxmeru" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#top" data-i18n="nav.home">Início</a></li>
+        <li><a href="#solutions" data-i18n="nav.solutions">Soluções</a></li>
+        <li><a href="#insights" data-i18n="nav.insights">Insights</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="https://coryntel.proxmeru.com" class="nav-cta" target="_blank" rel="noopener noreferrer" data-i18n="nav.coryntel">Conheça Coryntel Software</a>
+        <button id="lang-toggle" aria-label="Mudar idioma">EN</button>
+        <button class="nav-burger" id="menu-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-            <div class="flex items-center gap-4">
-                <a href="#" class="text-sm font-medium text-slate-300 hover:text-white transition-colors px-4 py-2 rounded-lg border border-slate-800 hover:bg-slate-900">
-                    Aceder ao Software
-                </a>
-                <a href="#teste" class="text-sm font-medium bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition-colors px-4 py-2 rounded-lg font-semibold shadow-lg shadow-emerald-500/20">
-                    Testar Grátis
-                </a>
-            </div>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-tag">
+          <span class="tag-dot"></span>
+          <span data-i18n="hero.tag">Engenharia de Software &amp; Cloud — Escala Global</span>
         </div>
-    </header>
-
-    <!-- 2. HERO SECTION -->
-    <section class="relative overflow-hidden pt-24 pb-20 lg:pt-32 lg:pb-28 border-b border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto">
-                <div class="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full text-xs font-semibold mb-6 border border-emerald-500/20">
-                    <i data-lucide="shield-check" class="w-4 h-4"></i> Software Certificado pela AT (Autoridade Tributária)
-                </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6">
-                    Gestão e Faturação Inteligente para <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Acelerar o seu Negócio</span>
-                </h1>
-                <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
-                    O Coryntel Software é um ecossistema integrado na cloud desenhado pela Proxmeru para otimizar a sua operação comercial, financeira e de ponto de venda em total conformidade legal.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#teste" class="w-full sm:w-auto px-8 py-4 bg-emerald-500 text-slate-950 font-bold rounded-xl shadow-xl shadow-emerald-500/10 hover:bg-emerald-400 transition-all text-center">
-                        Começar Teste Gratuito
-                    </a>
-                    <a href="#" class="w-full sm:w-auto px-8 py-4 bg-slate-900 text-slate-200 font-semibold rounded-xl border border-slate-800 hover:bg-slate-800 transition-all flex items-center justify-center gap-2">
-                        <i data-lucide="play-circle" class="w-5 h-5 text-slate-400"></i> Ver Demonstração
-                    </a>
-                </div>
-            </div>
-
-            <!-- Mockup do Software -->
-            <div class="mt-16 relative mx-auto max-w-5xl rounded-2xl border border-slate-800 bg-slate-900/50 p-4 backdrop-blur-sm shadow-2xl">
-                <div class="aspect-video w-full rounded-xl bg-slate-950 flex items-center justify-center border border-slate-800/80 text-slate-600 font-mono text-sm">
-                    <!-- Substituir por um screenshot real do dashboard do Coryntel -->
-                    [ Mockup da Interface / Dashboard do Coryntel Software ]
-                </div>
-            </div>
+        <h1>
+          <span data-i18n="hero.h1a">Infraestrutura que</span><br />
+          <span data-i18n="hero.h1b">Escala com o seu Negócio</span>
+        </h1>
+        <p>
+          <span data-i18n="hero.sub">Modernize a sua operação com arquiteturas cloud de alta disponibilidade, automação inteligente e engenharia de software que suporta empresas exigentes nos mercados europeu, americano e brasileiro.</span>
+        </p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/258870584831" class="btn-primary" data-wa="diagnosis" target="_blank" rel="noopener noreferrer" data-i18n="hero.cta1">Solicitar Diagnóstico Gratuito</a>
+          <a href="#solutions" class="btn-ghost" data-i18n="hero.cta2">Ver Soluções ↓</a>
         </div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent -z-10"></div>
-    </section>
+      </div>
 
-    <!-- 3. MÓDULOS DO SOFTWARE -->
-    <section id="modulos" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Módulos Desenhados para a sua Operação</h2>
-            <p class="mt-4 text-slate-400">Uma arquitetura robusta dividida em ferramentas focadas na eficiência de cada setor da sua empresa.</p>
+      <div class="hero-right">
+        <div class="mockup-window">
+          <div class="mockup-header">
+            <span class="mockup-dot" style="background:#ff5f57"></span>
+            <span class="mockup-dot" style="background:#febc2e"></span>
+            <span class="mockup-dot" style="background:#28c840"></span>
+            <span class="mockup-title" data-i18n="mockup.title">Proxmeru Tecnologia</span>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-stats">
+              <div class="mockup-stat">
+                <div class="mockup-stat-label" data-i18n="mockup.rpa">Automação / RPA</div>
+                <div class="mockup-stat-value" data-i18n="mockup.rpaValue" style="color:var(--blue)">+85<span>%</span></div>
+              </div>
+              <div class="mockup-stat">
+                <div class="mockup-stat-label" data-i18n="mockup.uptime">Uptime Cloud</div>
+                <div class="mockup-stat-value" data-i18n="mockup.uptimeValue" style="color:var(--green)">99.9<span>%</span></div>
+              </div>
+              <div class="mockup-stat">
+                <div class="mockup-stat-label" data-i18n="mockup.security">Segurança</div>
+                <div class="mockup-stat-value" data-i18n="mockup.securityValue" style="color:var(--green)">100<span>%</span></div>
+              </div>
+            </div>
+            <div class="mockup-chart">
+              <div class="mockup-chart-header">
+                <span data-i18n="mockup.perf">↗ Desempenho Global</span>
+                <div class="mockup-chart-dots">
+                  <div style="background:var(--blue)"></div>
+                  <div style="background:rgba(255,255,255,0.1)"></div>
+                </div>
+              </div>
+              <svg viewBox="0 0 400 120" preserveAspectRatio="none" class="mockup-svg">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0057ff" stop-opacity="0.25"/>
+                    <stop offset="100%" stop-color="#0057ff" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,100 C40,90 80,40 120,60 C160,80 200,20 240,40 C280,60 320,10 400,30 L400,120 L0,120 Z" fill="url(#chartGrad)"/>
+                <path d="M0,100 C40,90 80,40 120,60 C160,80 200,20 240,40 C280,60 320,10 400,30" fill="none" stroke="#0057ff" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="400" cy="30" r="4" fill="#0057ff"/>
+                <circle cx="400" cy="30" r="10" fill="#0057ff" opacity="0.2"/>
+              </svg>
+            </div>
+            <div class="mockup-code">
+              <div class="code-line" data-i18n="mockup.code1"><span class="c-purple">const</span> <span class="c-blue">proxmeru</span> <span class="c-white">=</span> <span class="c-green">await</span> <span class="c-blue">deploy</span><span class="c-white">(</span><span class="c-orange">'cloud'</span><span class="c-white">);</span></div>
+              <div class="code-line" data-i18n="mockup.code2"><span class="c-purple">const</span> <span class="c-blue">uptime</span> <span class="c-white">=</span> <span class="c-green">monitor</span><span class="c-white">({</span> <span class="c-orange">sla</span><span class="c-white">:</span> <span class="c-green">'99.9%'</span> <span class="c-white">});</span></div>
+              <div class="code-line" data-i18n="mockup.code3"><span class="c-purple">const</span> <span class="c-blue">rpa</span> <span class="c-white">=</span> <span class="c-green">automate</span><span class="c-white">(</span><span class="c-orange">processes</span><span class="c-white">,</span> <span class="c-green">ai</span><span class="c-white">);</span></div>
+              <div class="code-line"><span class="c-muted" data-i18n="mockup.law">// ✓ RGPD · LGPD · Lei n.º 4/2023</span></div>
+              <div class="code-line code-cursor" data-i18n="mockup.code4"><span class="c-blue">proxmeru</span><span class="c-white">.</span><span class="c-green">scale</span><span class="c-white">(</span><span class="c-orange">'global'</span><span class="c-white">);</span><span class="cursor-blink">|</span></div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Módulo 1 -->
-            <div class="bg-slate-900/40 p-8 rounded-2xl border border-slate-900 hover:border-slate-800 transition-all group">
-                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-all">
-                    <i data-lucide="file-text" class="w-6 h-6"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Gestão Comercial e Faturação</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Emissão rápida de faturas, recibos, orçamentos e notas de crédito. Gestão centralizada de clientes, fornecedores e contas correntes em poucos cliques.
-                </p>
-            </div>
-
-            <!-- Módulo 2 -->
-            <div class="bg-slate-900/40 p-8 rounded-2xl border border-slate-900 hover:border-slate-800 transition-all group">
-                <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-6 group-hover:bg-cyan-500 group-hover:text-slate-950 transition-all">
-                    <i data-lucide="monitor" class="w-6 h-6"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Ponto de Venda (POS)</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Interface intuitiva e extremamente veloz para balcão ou comércio local. Compatível com ecrãs touch, impressoras de talões e leitores de códigos de barras.
-                </p>
-            </div>
-
-            <!-- Módulo 3 -->
-            <div class="bg-slate-900/40 p-8 rounded-2xl border border-slate-900 hover:border-slate-800 transition-all group">
-                <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 group-hover:bg-purple-500 group-hover:text-slate-950 transition-all">
-                    <i data-lucide="wallet" class="w-6 h-6"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Tesouraria e Finanças</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Controlo absoluto dos fluxos de caixa. Gestão de despesas, conciliação bancária simplificada e relatórios financeiros detalhados em tempo real.
-                </p>
-            </div>
-
-            <!-- Módulo 4 -->
-            <div class="bg-slate-900/40 p-8 rounded-2xl border border-slate-900 hover:border-slate-800 transition-all group">
-                <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-400 mb-6 group-hover:bg-orange-500 group-hover:text-slate-950 transition-all">
-                    <i data-lucide="utensils" class="w-6 h-6"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Restauração Inteligente</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Mapeamento visual de salas e mesas, envio de pedidos direto para a cozinha e gestão dinâmica de menus para restaurantes, cafés e bares exigentes.
-                </p>
-            </div>
+  <!-- HERO STATS & TICKER -->
+  <section id="hero-stats">
+    <div class="container">
+      <div class="hero-stats">
+        <div class="stat"><strong data-i18n="hero.value1">99.9<span>%</span></strong><p data-i18n="hero.stat1">Uptime Cloud</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong data-i18n="hero.value2">+85<span>%</span></strong><p data-i18n="hero.stat2">Redução via RPA</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong data-i18n="hero.value3">100<span>%</span></strong><p data-i18n="hero.stat3">Código Auditável</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong data-i18n="hero.value4">RGPD</strong><p data-i18n="hero.stat4">Compliance Legal</p></div>
+      </div>
+      <div class="ticker">
+        <div class="ticker-track">
+          <span>AWS Cloud</span><span aria-hidden="true">·</span>
+          <span>Python &amp; AI</span><span aria-hidden="true">·</span>
+          <span>Docker &amp; Kubernetes</span><span aria-hidden="true">·</span>
+          <span>PostgreSQL</span><span aria-hidden="true">·</span>
+          <span>React &amp; Next.js</span><span aria-hidden="true">·</span>
+          <span>REST APIs</span><span aria-hidden="true">·</span>
+          <span>Linux &amp; DevOps</span><span aria-hidden="true">·</span>
+          <span>AWS Cloud</span><span aria-hidden="true">·</span>
+          <span>Python &amp; AI</span><span aria-hidden="true">·</span>
+          <span>Docker &amp; Kubernetes</span><span aria-hidden="true">·</span>
+          <span>PostgreSQL</span><span aria-hidden="true">·</span>
+          <span>React &amp; Next.js</span><span aria-hidden="true">·</span>
+          <span>REST APIs</span><span aria-hidden="true">·</span>
+          <span>Linux &amp; DevOps</span><span aria-hidden="true">·</span>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- 4. BENEFÍCIOS / INFRAESTRUTURA PROXMERU -->
-    <section id="beneficios" class="py-20 bg-slate-900/20 border-y border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  <!-- SOLUTIONS -->
+  <section id="solutions">
+    <div class="container">
+      <div class="section-label" data-i18n="sol.label">Soluções</div>
+      <div class="section-heading">
+        <h2 data-i18n="sol.h2">Tecnologia de Elite para <span class="gradient-text">Operações sem Limites</span></h2>
+        <p data-i18n="sol.sub">Cada solução é desenhada à medida, com arquiteturas escaláveis e código limpo que suporta o crescimento da sua empresa a longo prazo.</p>
+      </div>
+      <div class="solutions-grid">
+        <div class="sol-card">
+          <div class="sol-num">01</div>
+          <h3 data-i18n="sol.1.title">Software &amp; SaaS</h3>
+          <p data-i18n="sol.1.desc">Sistemas inteligentes e plataformas cloud desenvolvidos à medida para otimizar processos críticos da sua empresa.</p>
+          <a href="https://wa.me/258870584831" class="sol-link" data-wa="solution-1" target="_blank" rel="noopener noreferrer" data-i18n="sol.1.cta">Solicitar Solução <span>→</span></a>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">02</div>
+          <h3 data-i18n="sol.2.title">Cloud &amp; Infraestrutura</h3>
+          <p data-i18n="sol.2.desc">Arquiteturas resilientes em AWS com alta disponibilidade, segurança avançada e escalabilidade automática.</p>
+          <a href="https://wa.me/258870584831" class="sol-link" data-wa="solution-2" target="_blank" rel="noopener noreferrer" data-i18n="sol.2.cta">Falar com Especialista <span>→</span></a>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">03</div>
+          <h3 data-i18n="sol.3.title">Hiperautomação &amp; Analytics</h3>
+          <p data-i18n="sol.3.desc">RPA e inteligência artificial que eliminam tarefas manuais, reduzem erros e liberam a sua equipa para o que importa.</p>
+          <a href="https://wa.me/258870584831" class="sol-link" data-wa="solution-3" target="_blank" rel="noopener noreferrer" data-i18n="sol.3.cta">Automatizar Agora <span>→</span></a>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">04</div>
+          <h3 data-i18n="sol.4.title">Segurança de Dados</h3>
+          <p data-i18n="sol.4.desc">Proteção end-to-end com backup, recuperação e conformidade total com RGPD, LGPD e Lei n.º 4/2023.</p>
+          <a href="https://wa.me/258870584831" class="sol-link" data-wa="solution-4" target="_blank" rel="noopener noreferrer" data-i18n="sol.4.cta">Auditar Segurança <span>→</span></a>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">05</div>
+          <h3 data-i18n="sol.5.title">Presença Digital</h3>
+          <p data-i18n="sol.5.desc">Posicionamento de marca, design de alto impacto e estratégias digitais que atraem clientes qualificados globalmente.</p>
+          <a href="https://wa.me/258870584831" class="sol-link" data-wa="solution-5" target="_blank" rel="noopener noreferrer" data-i18n="sol.5.cta">Crescer Online <span>→</span></a>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">06</div>
+          <h3 data-i18n="sol.6.title">Formação Tecnológica</h3>
+          <p data-i18n="sol.6.desc">Capacitação prática de equipas em ferramentas cloud, automação e sistemas empresariais modernos.</p>
+          <a href="https://wa.me/258870584831" class="sol-link" data-wa="solution-6" target="_blank" rel="noopener noreferrer" data-i18n="sol.6.cta">Capacitar Equipa <span>→</span></a>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">07</div>
+          <h3 data-i18n="sol.7.title">Coryntel Software</h3>
+          <p data-i18n="sol.7.desc">Sistema integrado de gestão e faturação online certificado pela AT, desenhado para acelerar o crescimento da sua empresa.</p>
+          <a href="https://coryntel.proxmeru.com" class="sol-link" target="_blank" rel="noopener noreferrer" data-i18n="sol.7.cta">Conheça o Coryntel <span>→</span></a>
+        </div>
+      <div class="sol-card" style="background: var(--dark);"></div>
+      <div class="sol-card" style="background: var(--dark);"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section id="clients">
+    <div class="container">
+      <div class="clients-bar">
+        <div class="clients-label" data-i18n="clients.label">Empresas que confiam na Proxmeru</div>
+        <div class="clients-ticker-wrap">
+          <div class="clients-ticker">
+            <span>Gráfica ABS</span>
+            <span>Centro Médico Embondeiro</span>
+            <span>Premium Healthcare Solutions</span>
+            <span>Consultório Médico Terra Rio</span>
+            <span>Clínica Médica Monte Sinai</span>
+            <span>PHC Software</span>
+            <span>+ Emprego</span>
+            <span>Sabor Brasil</span>
+            <span>Gráfica ABS</span>
+            <span>Centro Médico Embondeiro</span>
+            <span>Premium Healthcare Solutions</span>
+            <span>Consultório Médico Terra Rio</span>
+            <span>Clínica Médica Monte Sinai</span>
+            <span>PHC Software</span>
+            <span>+ Emprego</span>
+            <span>Sabor Brasil</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-label" data-i18n="testi.label">Clientes</div>
+      <div class="section-heading">
+        <h2 data-i18n="testi.h2">Resultados que <span class="gradient-text">Falam por Si Mesmos</span></h2>
+        <p data-i18n="testi.sub">Empresas inovadoras confiam na Proxmeru para transformar operações e impulsionar eficiência a escala.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <blockquote data-i18n="testi.1">A Proxmeru transformou a nossa gestão financeira, automatizando lançamentos e relatórios — economizando tempo e permitindo decisões muito mais estratégicas.</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar">FM</div>
             <div>
-                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">A Engenharia de Software da Proxmeru ao Serviço do seu Negócio</h2>
-                <p class="text-slate-400 mb-8 leading-relaxed">
-                    O Coryntel não é apenas mais um programa de faturação. Ele foi construído com a infraestrutura e padrões de elite que caracterizam a Proxmeru Tecnologia.
-                </p>
-                
-                <ul class="space-y-4">
-                    <li class="flex items-start gap-3">
-                        <i data-lucide="check" class="w-5 h-5 text-emerald-400 mt-0.5 shrink-0"></i>
-                        <div>
-                            <strong class="text-slate-200 block">100% Cloud de Alta Disponibilidade</strong>
-                            <span class="text-slate-400 text-sm">Aceda de qualquer lugar com garantia de 99.9% de Uptime sobre servidores AWS robustos.</span>
-                        </div>
+              <strong>Fernando Mendes</strong>
+              <span>Diretor Geral · Nexus Ledger, Lda</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <blockquote data-i18n="testi.2">Os sistemas de automação com sensores, câmaras e controlos elétricos permitiram-nos oferecer serviços mais ágeis e lucrativos para as nossas operações.</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar">GJ</div>
+            <div>
+              <strong>Gerson José</strong>
+              <span>COO · GG Elétrica SU, Lda</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <blockquote data-i18n="testi.3">Com o Coryntel, o software da Proxmeru, o processamento de salários e a gestão de colaboradores tornaram-se rápidos, precisos e totalmente integrados na cloud.</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar">RE</div>
+            <div>
+              <strong class="lang-fade">Rui Estanha</strong>
+              <span class="lang-fade">Gestor de RH · Paradox Consulting, Lda</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section id="stack">
+    <div class="container">
+      <div class="section-label" data-i18n="stack.label">Infraestrutura</div>
+      <div class="section-heading">
+        <h2 data-i18n="stack.h2">A Engenharia por <span class="gradient-text">Trás de Cada Solução</span></h2>
+        <p data-i18n="stack.sub">Tecnologias de referência mundial, combinadas com arquiteturas de elite para garantir performance, segurança e escala.</p>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-card">
+          <div class="stack-card-heading">
+            <div class="stack-icon">☁</div>
+            <h3 data-i18n="stack.1.title">Cloud &amp; DevOps</h3>
+          </div>
+          <p data-i18n="stack.1.desc">Infraestruturas resilientes na AWS. Ambientes isolados com tolerância a falhas e Uptime de 99.9%.</p>
+          <div class="stack-tag" data-i18n="stack.1.tag">Alta Disponibilidade</div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-card-heading">
+            <div class="stack-icon">⚡</div>
+            <h3 data-i18n="stack.2.title">Backend</h3>
+          </div>
+          <p data-i18n="stack.2.desc">Sistemas em Node.js e Python otimizados para alta concorrência, estabilidade e integrações corporativas complexas.</p>
+          <div class="stack-tag" data-i18n="stack.2.tag">Arquitetura de Dados</div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-card-heading">
+            <div class="stack-icon">◈</div>
+            <h3 data-i18n="stack.3.title">Interfaces de Elite</h3>
+          </div>
+          <p data-i18n="stack.3.desc">Aplicações SPA e SSR com React e Next.js. Desempenho maximizado e experiências que convertem.</p>
+          <div class="stack-tag" data-i18n="stack.3.tag">UX &amp; Performance</div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-card-heading">
+            <div class="stack-icon">⬡</div>
+            <h3 data-i18n="stack.4.title">Security</h3>
+          </div>
+          <p data-i18n="stack.4.desc">Bases de dados encriptadas end-to-end. Código auditável em conformidade com RGPD, LGPD e Lei n.º 4/2023.</p>
+          <div class="stack-tag" data-i18n="stack.4.tag">Conformidade Legal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container faq-container">
+      <div class="faq-left">
+        <div class="section-label" data-i18n="faq.label">FAQ</div>
+        <h2 data-i18n="faq.h2">Perguntas<br />Frequentes</h2>
+        <p data-i18n="faq.sub">Tudo o que precisa de saber antes de modernizar a sua empresa.</p>
+        <a href="#contact" class="btn-primary" data-i18n="faq.cta" style="margin-top:2rem;display:inline-block;">Falar Connosco →</a>
+      </div>
+      <div class="faq-right">
+        <details class="faq-item" open>
+          <summary data-i18n="faq.q1">As soluções desenvolvidas são personalizadas?</summary>
+          <div class="faq-answer"><div class="faq-answer-inner"><p data-i18n="faq.a1">Sim. Toda a nossa engenharia é desenvolvida à medida, com código limpo e arquiteturas escaláveis alinhadas com as necessidades de cada empresa.</p></div></div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q2">As soluções de infraestrutura operam em Cloud?</summary>
+          <div class="faq-answer"><div class="faq-answer-inner"><p data-i18n="faq.a2">Sim. Trabalhamos com AWS e Google Cloud, garantindo ambientes resilientes, escaláveis e com uptime de 99.9%.</p></div></div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q3">A Proxmeru disponibiliza suporte técnico contínuo?</summary>
+          <div class="faq-answer"><div class="faq-answer-inner"><p data-i18n="faq.a3">Sim. Oferecemos monitorização 24/7 e suporte técnico dedicado para todos os sistemas e infraestruturas que gerimos.</p></div></div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q4">Como funciona a Hiperautomação e Analytics?</summary>
+          <div class="faq-answer"><div class="faq-answer-inner"><p data-i18n="faq.a4">Mapeamos os processos da sua empresa, identificamos oportunidades e implementamos RPA e IA que reduzem custos operacionais em até 85%.</p></div></div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q5">As soluções garantem conformidade com RGPD e LGPD?</summary>
+          <div class="faq-answer"><div class="faq-answer-inner"><p data-i18n="faq.a5">Sim. Todas as soluções são desenvolvidas em conformidade com RGPD, LGPD e Lei n.º 4/2023.</p></div></div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q6">Que tipo de formação tecnológica é entregue?</summary>
+          <div class="faq-answer"><div class="faq-answer-inner"><p data-i18n="faq.a6">Formações práticas em ferramentas cloud, automação e sistemas empresariais, adaptadas ao nível e contexto de cada equipa.</p></div></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section id="insights">
+    <div class="container">
+      <div class="section-label" data-i18n="insights.label">Insights</div>
+      <div class="section-heading">
+        <h2 data-i18n="insights.h2">Inteligência Técnica para <span class="gradient-text">Líderes de Mercado</span></h2>
+        <p data-i18n="insights.sub">Estratégias avançadas de engenharia, cloud e automação inteligente para empresas líderes que operam com sucesso à escala global competitiva.</p>
+      </div>
+      <div class="insights-grid">
+        <article class="insight-card">
+          <div class="insight-tag" data-i18n="insights.tag1">Hiperautomação &amp; RPA</div>
+          <h3 data-i18n="insights.title1">Hiperautomação B2B: Como IA e RPA Reduzem Custos em 85%</h3>
+          <p data-i18n="insights.desc1">Como a convergência entre Inteligência Artificial e RPA elimina tarefas manuais, zera erros e reduz custos operacionais.</p>
+          <div class="insight-footer">
+            <span data-i18n="insights.date">2 Agosto, 2026</span>
+            <a href="https://linkedin.com/company/proxmeru" target="_blank" rel="noopener noreferrer" data-i18n="insights.readmore">Ler mais →</a>
+          </div>
+        </article>
+        <article class="insight-card">
+          <div class="insight-tag" data-i18n="insights.tag2">Cibersegurança &amp; Compliance</div>
+          <h3 data-i18n="insights.title2">Engenharia de Software e Conformidade: RGPD, LGPD e a Nova Lei</h3>
+          <p data-i18n="insights.desc2">Os pilares da engenharia corporativa para alinhar a sua infraestrutura técnica ao RGPD, LGPD e nova Lei de Proteção de Dados.</p>
+          <div class="insight-footer">
+            <span data-i18n="insights.date">2 Agosto, 2026</span>
+            <a href="https://linkedin.com/company/proxmeru" target="_blank" rel="noopener noreferrer" data-i18n="insights.readmore">Ler mais →</a>
+          </div>
+        </article>
+        <article class="insight-card">
+          <div class="insight-tag" data-i18n="insights.tag3">Cloud &amp; Infraestrutura</div>
+          <h3 data-i18n="insights.title3">Arquitetura Multi-Cloud: Como Garantir 99.9% de Uptime</h3>
+          <p data-i18n="insights.desc3">Como a engenharia multi-cloud entre AWS e Google Cloud elimina falhas críticas e otimiza os custos operacionais.</p>
+          <div class="insight-footer">
+            <span data-i18n="insights.date">2 Agosto, 2026</span>
+            <a href="https://linkedin.com/company/proxmeru" target="_blank" rel="noopener noreferrer" data-i18n="insights.readmore">Ler mais →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <p class="cta-rating">★★★★★ <span data-i18n="cta.rating">Confiado por empresas e equipas inovadoras</span></p>
+        <h2 data-i18n="cta.h2">Pronto para Modernizar a sua <span class="gradient-text">Infraestrutura?</span></h2>
+        <p class="cta-sub" data-i18n="cta.sub">Agende uma reunião de diagnóstico com os nossos engenheiros e dê o próximo passo.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://wa.me/258870584831" class="btn-primary" data-wa="diagnosis" target="_blank" rel="noopener noreferrer" data-i18n="cta.btn1">Solicitar Diagnóstico</a>
+        <a href="https://wa.me/258870584831" class="btn-ghost-light" data-wa="expert" target="_blank" rel="noopener noreferrer" data-i18n="cta.btn2">Falar com Especialista →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container contact-container">
+      <div class="contact-left">
+        <div class="section-label" data-i18n="contact.label">Contacto</div>
+        <h2 data-i18n="contact.h2">Vamos Construir<br />Algo Extraordinário</h2>
+        <p data-i18n="contact.sub">Fale com a nossa equipa de engenharia e descubra como a Proxmeru pode transformar a infraestrutura tecnológica da sua empresa.</p>
+        <ul class="contact-info">
+          <li><span>✉</span> comercia@proxmeru.com</li>
+          <li><span>🌐&#xfe0e;</span> proxmeru.com</li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contact-form" action="https://formsubmit.co/comercial@proxmeru.com" method="POST">
+        <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <input type="hidden" name="_subject" value="Nova mensagem pelo site Proxmeru" />
+        <input type="hidden" name="_next" value="https://www.proxmeru.com/?contact=success#contact" />
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Nome completo" data-i18n-ph="contact.ph.name" required />
+          <input type="text" name="company" placeholder="Empresa" data-i18n-ph="contact.ph.company" />
+        </div>
+        <input type="email" name="email" placeholder="E-mail corporativo" data-i18n-ph="contact.ph.email" required />
+        <select name="area" data-i18n-select="contact.select">
+          <option value="" disabled selected data-i18n-opt="contact.opt.area">Área de interesse</option>
+          <option data-i18n-opt="contact.opt.software">Software &amp; SaaS</option>
+          <option data-i18n-opt="contact.opt.cloud">Cloud &amp; Infraestrutura</option>
+          <option data-i18n-opt="contact.opt.hiperautomacao">Hiperautomação &amp; Analytics</option>
+          <option data-i18n-opt="contact.opt.seguranca">Segurança de Dados</option>
+          <option data-i18n-opt="contact.opt.presenca">Presença Digital</option>
+          <option data-i18n-opt="contact.opt.formacao">Formação Tecnológica</option>
+          <option data-i18n-opt="contact.opt.coryntel">Coryntel Software</option>
+        </select>
+        <textarea name="message" placeholder="Descreva o seu projeto ou desafio" data-i18n-ph="contact.ph.message" required></textarea>
+        <button type="submit" class="btn-primary" data-i18n="contact.send">Enviar Mensagem</button>
+        <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo.png" alt="Proxmeru" class="footer-logo" />
+        <p data-i18n="footer.brand.desc">Engenharia de software de alta performance e modernização tecnológica para ecossistemas empresariais globais.</p>
+        <div class="footer-social">
+          <a href="http://x.com/proxmeru" aria-label="Twitter" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.736l7.737-8.852L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/proxmeru" aria-label="LinkedIn" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/proxmeru" aria-label="GitHub" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://instagram.com/proxmeru" aria-label="Instagram" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3.5A5.5 5.5 0 1017.5 13 5.5 5.5 0 0012 7.5zm0 2A3.5 3.5 0 1112 17a3.5 3.5 0 010-7zm5.8-2.6a1.2 1.2 0 11-1.2 1.2 1.2 1.2 0 011.2-1.2z"/></svg>
+          </a>
+          <a href="https://facebook.com/proxmeru" aria-label="Facebook" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2.3c0-2.1 1.3-3.2 3.2-3.2.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.5l-.4 3h-2.1v7A10 10 0 0022 12z"/></svg>
+          </a>
+          <a href="https://wa.me/258870584831" aria-label="WhatsApp" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.52 0 .2 5.32.2 11.86c0 2.1.55 4.16 1.6 6l-1.7 6.2 6.4-1.68a11.86 11.86 0 005.56 1.4h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.24-6.15-3.4-8.32zM12.06 21.5a9.6 9.6 0 01-4.9-1.33l-.35-.2-3.8 1 1.02-3.7-.23-.38a9.6 9.6 0 01-1.5-5.15C2.3 6.3 6.6 2 12.06 2c2.6 0 5.05 1.02 6.88 2.85a9.7 9.7 0 012.85 6.88c0 5.45-4.3 9.77-9.73 9.77zm5.4-7.4c-.3-.15-1.8-.9-2.08-1-.28-.1-.48-.15-.68.15-.2.3-.78 1-.96 1.2-.18.2-.36.22-.66.08-.3-.15-1.26-.47-2.4-1.5-.88-.78-1.47-1.74-1.65-2.04-.18-.3-.02-.46.13-.61.14-.14.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.63-.94-2.24-.25-.6-.5-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.28.3-1.1 1.08-1.1 2.63 0 1.55 1.13 3.05 1.29 3.26.15.2 2.23 3.4 5.4 4.77.75.33 1.34.53 1.8.68.76.24 1.45.2 1.99.12.61-.1 1.8-.74 2.05-1.46.25-.72.25-1.34.17-1.46-.07-.12-.27-.2-.57-.35z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.solutions.title">Soluções</h4>
+        <ul>
+          <li><a href="https://coryntel.proxmeru.com" target="_blank" data-i18n="footer.solutions.coryntel">Coryntel Software</a></li>
+          <li><a href="#solutions" data-i18n="footer.solutions.saas">Engenharia de Software &amp; SaaS</a></li>
+          <li><a href="#solutions" data-i18n="footer.solutions.cloud">Cloud &amp; Infraestrutura de TI</a></li>
+          <li><a href="#solutions" data-i18n="footer.solutions.hiperautomacao">Hiperautomação &amp; Analytics</a></li>
+          <li><a href="#solutions" data-i18n="footer.solutions.seguranca">Segurança de Dados</a></li>
+          <li><a href="#solutions" data-i18n="footer.solutions.presenca">Presença Digital</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.company.title">Empresa</h4>
+        <ul>
+          <li><a href="#top" data-i18n="footer.company.inicio">Início</a></li>
+          <li><a href="#solutions" data-i18n="footer.company.solucoes">Soluções</a></li>
+          <li><a href="#insights" data-i18n="footer.company.insights">Insights</a></li>
+          <li><a href="#contact" data-i18n="footer.company.contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.newsletter.title">Newsletter</h4>
+        <p data-i18n="footer.newsletter.desc">Receba inteligência técnica da nossa equipa de engenharia.</p>
+        <form class="footer-newsletter">
+          <input type="email" name="email" placeholder="nome@empresa.com" data-i18n-ph="footer.newsletter.placeholder" required />
+          <button type="submit" data-i18n="footer.newsletter.btn">Subscrever</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p data-i18n="footer.copyright">© <span id="year"></span> Proxmeru. Todos os direitos reservados.</p>
+        <div class="footer-legal">
+          <a href="privacidade.html" target="_blank" rel="noopener noreferrer" data-i18n="footer.privacy">Política de Privacidade (RGPD / LGPD / Lei n.º 4/2023)</a>
+          <a href="termos.html" target="_blank" rel="noopener noreferrer" data-i18n="footer.terms">Termos de Serviço</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
