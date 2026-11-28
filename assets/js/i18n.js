@@ -1,7 +1,8 @@
 const t = {
   pt: {
     "nav.home": "Início", "nav.solutions": "Soluções", "nav.insights": "Insights",
-    "nav.contact": "Contacto", "nav.cta": "Falar com Especialista", "nav.coryntel": "Conheça Coryntel Software",
+    "nav.contact": "Contacto", "nav.funcionalidades": "Funcionalidades", "nav.modulos": "Módulos",
+    "nav.como-funciona": "Como Funciona", "nav.cta": "Falar com Especialista", "nav.coryntel": "Conheça Coryntel Software",
     "hero.tag": "Engenharia de Software & Cloud — Escala Global",
     "hero.h1a": "Infraestrutura que",
     "hero.h1b": "Escala com o seu Negócio",
@@ -208,7 +209,8 @@ const t = {
   },
   en: {
     "nav.home": "Home", "nav.solutions": "Solutions", "nav.insights": "Insights",
-    "nav.contact": "Contact", "nav.cta": "Talk to a Specialist", "nav.coryntel": "Discover Coryntel Software",
+    "nav.contact": "Contact", "nav.funcionalidades": "Funcionalidades", "nav.modulos": "Modules",
+    "nav.como-funciona": "How it Works", "nav.cta": "Talk to a Specialist", "nav.coryntel": "Discover Coryntel Software",
     "hero.tag": "Software Engineering & Cloud — Global Scale",
     "hero.h1a": "Infrastructure that",
     "hero.h1b": "Scales with Your Business",
